@@ -10,7 +10,7 @@ def binarySearch(sorted_list, l, r, x):
     else:
         return -1
 
-sorted_list = [1,3,4,5,7,10,13,16,20,35,45,55]
+sorted_list = [1,3,4,5,7,10,13,16,20,35,45,55,56]
 
 x = binarySearch(sorted_list, 0, len(sorted_list), 20)
 print sorted_list[x]
