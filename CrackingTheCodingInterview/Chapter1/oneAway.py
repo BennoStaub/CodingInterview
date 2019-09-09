@@ -21,9 +21,6 @@ def check_insert(small_string, big_string):
 	i, j = 0,0
 	edited = False
 	while i < len(small_string) and j < len(big_string):
-		print small_string[i]
-		print big_string[j]
-		print 'next'
 		if small_string[i] != big_string[j]:
 			if edited:
 				return False
@@ -38,4 +35,4 @@ def check_insert(small_string, big_string):
 if __name__ == '__main__':
 	base_string = 'pale'
 	check_string = 'ple'
-	print oneAway(base_string, check_string)
+	print(oneAway(base_string, check_string))

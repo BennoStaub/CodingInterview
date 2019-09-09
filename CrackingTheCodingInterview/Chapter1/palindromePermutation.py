@@ -1,7 +1,7 @@
 def palindromePermutation(string):
 	string = string.lower()
 	string = string.replace(' ', '')
-	bit_vector = [0 for _ in xrange(26)]
+	bit_vector = [0 for _ in range(26)]
 	for char in string:
 		index = ord(char) - ord('a')
 		bit_vector[index] += 1
@@ -14,4 +14,4 @@ def palindromePermutation(string):
 
 if __name__ == '__main__':
 	string = 'Tact Coa'
-	print palindromePermutation(string)
+	print(palindromePermutation(string))

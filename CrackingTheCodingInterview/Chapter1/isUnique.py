@@ -9,4 +9,4 @@ def isUnique(string):
 
 if __name__ == '__main__':
 	string = 'sdeyrkjly'
-	print isUnique(string)
+	print(isUnique(string))

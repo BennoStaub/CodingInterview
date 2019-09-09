@@ -1,5 +1,5 @@
 def checkPermutation(base_string, check_string):
-	bit_vector = [0 for _ in xrange(26)]
+	bit_vector = [0 for _ in range(26)]
 	for char in base_string:
 		index = ord(char) - ord('a')
 		bit_vector[index] += 1
@@ -16,4 +16,4 @@ def checkPermutation(base_string, check_string):
 if __name__ == '__main__':
 	base_string = 'abbcccdddd'
 	check_string = 'abcdbcdcdd'
-	print checkPermutation(base_string, check_string)
+	print(checkPermutation(base_string, check_string))
