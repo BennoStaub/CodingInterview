@@ -3,11 +3,10 @@ class Node():
 		self.value = value
 		self.next = None
 
-def initiateLinkedList():
-	head = Node(5)
-	values = [10,4,7,3,8,4,3,56,8,5,2,4,6,8,4,3]
+def initiateLinkedList(values):
+	head = Node(values[0])
 	temp = head
-	for value in values:
+	for value in values[1:]:
 		node = Node(value)
 		temp.next = node
 		temp = node

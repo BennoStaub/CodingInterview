@@ -18,7 +18,7 @@ def removeDups(head):
 
 
 if __name__ == '__main__':
-	head = initiateLinkedList()
+	head = initiateLinkedList([10,4,7,3,8,4,3,56,8,5,2,4,6,8,4,3])
 	printLinkedList(head)
 	removeDups(head)
 	print('removed')
