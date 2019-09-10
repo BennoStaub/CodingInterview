@@ -12,7 +12,7 @@ def intersection(head1, head2):
 		else:
 			for _ in range(length2 - length1):
 				head2 = head2.next
-		while head1 != head2:
+		while head1 is not head2:
 			head1 = head1.next
 			head2 = head2.next
 		return head1
@@ -26,7 +26,7 @@ def haveIntersection(head1, head2):
 		last1 = last1.next
 	while last2.next:
 		last2 = last2.next
-	return last1 == last2
+	return last1 is last2
 
 
 if __name__ == '__main__':

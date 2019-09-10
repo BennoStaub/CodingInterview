@@ -20,7 +20,7 @@ def printLinkedList(head):
 	return head
 
 def computeLength(head):
-	if head == None:
+	if head is None:
 		return 0
 	else:
 		length = 0
