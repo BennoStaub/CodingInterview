@@ -6,13 +6,13 @@ from linkedList import Node, initiateLinkedList, printLinkedList
 def removeDups(head):
 	pointer1 = head
 	pointer2 = head
-	while pointer1 != None:
-		while pointer2 != None and pointer2.next != None:
+	while pointer1:
+		while pointer2 and pointer2.next:
 			if pointer2.next.value == pointer1.value:
 				pointer2.next = pointer2.next.next
 			pointer2 = pointer2.next
 		pointer1 = pointer1.next
-		if pointer1 != None:
+		if pointer1:
 			pointer2 = pointer1.next
 	return head
 

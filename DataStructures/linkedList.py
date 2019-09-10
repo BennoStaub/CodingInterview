@@ -15,7 +15,17 @@ def initiateLinkedList():
 
 def printLinkedList(head):
 	temp = head
-	while temp != None:
+	while temp:
 		print(temp.value)
 		temp = temp.next
 	return head
+
+def computeLength(head):
+	if head == None:
+		return 0
+	else:
+		length = 0
+		while head:
+			length += 1
+			head = head.next
+		return length
