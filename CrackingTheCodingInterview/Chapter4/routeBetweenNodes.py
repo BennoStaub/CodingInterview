@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../../DataStructures/')
-from graph import Node, Graph
+from graph import Node, Graph, initiateGraph
 
 def breadthFirstSeach(graph, s, t):
 	if s is t:
@@ -23,8 +23,7 @@ def breadthFirstSeach(graph, s, t):
 
 
 if __name__ == '__main__':
-	graph = Graph()
-	graph.initiateGraph()
+	graph = initiateGraph()
 	graph.printGraph()
 	print(breadthFirstSeach(graph, graph.nodes[0], graph.nodes[1]))
 
