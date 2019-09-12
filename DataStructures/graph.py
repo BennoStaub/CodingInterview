@@ -25,6 +25,10 @@ class Graph():
 	def addNode(self, node):
 		self.nodes.append(node)
 
+	def addNodes(self, nodes):
+		for node in nodes:
+			self.addNode(node)
+
 	def removeNode(self, node):
 		self.nodes.remove(node)
 
@@ -40,12 +44,7 @@ class Graph():
 		node1.addChildren([node3, node4])
 		node2.addChildren([node1])
 		node3.addChildren([node2, node4])
-		self.addNode(node0)
-		self.addNode(node1)
-		self.addNode(node2)
-		self.addNode(node3)
-		self.addNode(node4)
-		self.addNode(node5)
+		self.addNodes([node0, node1, node2, node3, node4, node5])
 
 	def printGraph(self):
 		for node in self.nodes:

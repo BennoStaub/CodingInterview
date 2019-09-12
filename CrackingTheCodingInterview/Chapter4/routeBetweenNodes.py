@@ -3,6 +3,9 @@ sys.path.append('../../DataStructures/')
 from graph import Node, Graph
 
 def breadthFirstSeach(graph, s, t):
+	if s is t:
+		return -1
+
 	queue = []
 	s.visited = True
 	for child in s.children:
@@ -24,6 +27,6 @@ if __name__ == '__main__':
 	graph.initiateGraph()
 	print(graph.nodes)
 	graph.printGraph()
-	print(breadthFirstSeach(graph, graph.nodes[3], graph.nodes[0]))
+	print(breadthFirstSeach(graph, graph.nodes[0], graph.nodes[1]))
 
 
