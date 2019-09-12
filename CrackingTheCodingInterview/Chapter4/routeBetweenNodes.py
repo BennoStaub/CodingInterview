@@ -25,7 +25,6 @@ def breadthFirstSeach(graph, s, t):
 if __name__ == '__main__':
 	graph = Graph()
 	graph.initiateGraph()
-	print(graph.nodes)
 	graph.printGraph()
 	print(breadthFirstSeach(graph, graph.nodes[0], graph.nodes[1]))
 
