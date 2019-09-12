@@ -18,6 +18,15 @@ class SetOfStacks():
 			self.number_stacks -= 1
 			return self.set_of_stacks.pop()
 
+	def popAt(self, stack_index):
+		if stack_index >= self.number_stacks:
+			return -1
+		if len(self.set_of_stacks[stack_index]) > 1:
+			return self.set_of_stacks[stack_index].pop()
+		else:
+			self.number_stacks -= 1
+			return self.set_of_stacks.pop(stack_index)
+
 
 if __name__ == '__main__':
 	stacks = SetOfStacks(5)
@@ -26,17 +35,17 @@ if __name__ == '__main__':
 	stacks.push(6)
 	stacks.push(10)
 	stacks.push(7)
-	print(stacks.set_of_stacks)
 	stacks.push(4)
 	stacks.push(14)
+	stacks.push(4)
+	stacks.push(3)
+	stacks.push(7)
+	stacks.push(10)
+	stacks.push(2)
 	print(stacks.set_of_stacks)
-	stacks.pop()
-	print(stacks.set_of_stacks)
-	stacks.pop()
-	print(stacks.set_of_stacks)
-	stacks.push(22)
-	print(stacks.set_of_stacks)
-	stacks.pop()
-	stacks.pop()
-	stacks.pop()
+	stacks.popAt(1)
+	stacks.popAt(1)
+	stacks.popAt(1)
+	stacks.popAt(1)
+	stacks.popAt(1)
 	print(stacks.set_of_stacks)
