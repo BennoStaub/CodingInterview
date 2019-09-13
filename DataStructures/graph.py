@@ -48,13 +48,13 @@ def initiateBinaryTree():
 	#	4	 8
 	root = BinaryTreeNode(10)
 	root = root
-	root.left = BinaryTreeNode(5)
-	root.right = BinaryTreeNode(7)
-	root.left.left = BinaryTreeNode(12)
-	root.left.left.left = BinaryTreeNode(4)
-	root.left.left.right = BinaryTreeNode(8)
-	root.left.right = BinaryTreeNode(15)
-	root.right.right = BinaryTreeNode(9)
+	root.left = BinaryTreeNode(5, parent=root)
+	root.right = BinaryTreeNode(7, parent=root)
+	root.left.left = BinaryTreeNode(12, parent=root.left)
+	root.left.left.left = BinaryTreeNode(4, parent=root.left.left)
+	root.left.left.right = BinaryTreeNode(8, parent=root.left.left)
+	root.left.right = BinaryTreeNode(15, parent=root.left)
+	root.right.right = BinaryTreeNode(9, parent=root.right)
 	return root
 
 def printBinaryTree(tree):
