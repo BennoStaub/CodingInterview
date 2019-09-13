@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../../DataStructures/')
-from graph import Node, Graph, initiateGraph, initiateBinarySearchTree
+from graph import Node, Graph, initiateGraph, initiateBinarySearchTreeGraph
 
 def validateBST(graph):
 	BST = True
@@ -16,7 +16,7 @@ def validateBST(graph):
 
 if __name__ == '__main__':
 	graph = Graph()
-	initiateBinarySearchTree(graph, [1,3,4,6,9,12,15,19,22,25])
+	initiateBinarySearchTreeGraph(graph, [1,3,4,6,9,12,15,19,22,25])
 	graph.printGraph()
 	print([node.value for node in graph.nodes])
 	print(validateBST(graph))

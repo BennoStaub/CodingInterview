@@ -17,11 +17,11 @@ class Node():
 		self.children.remove(node)
 
 class BinaryTreeNode():
-	def __init__(self, value, left=None, right=None):
+	def __init__(self, value, left=None, right=None, parent=None):
 		self.value = value
-		self.visited = False
 		self.left = left
 		self.right = right
+		self.parent = parent
 
 	def addLeft(self, child):
 		self.left = child
@@ -56,6 +56,30 @@ def initiateBinaryTree():
 	root.left.right = BinaryTreeNode(15)
 	root.right.right = BinaryTreeNode(9)
 	return root
+
+def printBinaryTree(tree):
+	level = [tree]
+	children = []
+	while level:
+		printList = [node.value for node in level]
+		print(printList)
+		for node in level:
+			if node.left:
+				children.append(node.left)
+			if node.right:
+				children.append(node.right)
+		level = children
+		children = []
+
+def initiateBinarySearchTree(values, parent=None):
+	if values:
+		node = BinaryTreeNode(values[len(values) // 2], parent=parent)
+		if values[:len(values) // 2]:
+			node.left = initiateBinarySearchTree(values[:len(values) // 2], node)
+		if values[len(values) // 2 + 1:]:
+			node.right = initiateBinarySearchTree(values[len(values) // 2 + 1:], node)
+		return node
+
 
 
 
@@ -101,14 +125,14 @@ def initiateGraph():
 	graph.addNodes([node0, node1, node2, node3, node4, node5])
 	return graph
 
-def initiateBinarySearchTree(graph, values):
+def initiateBinarySearchTreeGraph(graph, values):
 	if values:
 		node = Node(values[len(values) // 2])
 		graph.addNode(node)
 		if values[:len(values) // 2]:
-			node.children.append(initiateBinarySearchTree(graph, values[:len(values) // 2]))
+			node.children.append(initiateBinarySearchTreeGraph(graph, values[:len(values) // 2]))
 		if values[len(values) // 2 + 1:]:
-			node.children.append(initiateBinarySearchTree(graph, values[len(values) // 2 + 1:]))
+			node.children.append(initiateBinarySearchTreeGraph(graph, values[len(values) // 2 + 1:]))
 		return node
 
 

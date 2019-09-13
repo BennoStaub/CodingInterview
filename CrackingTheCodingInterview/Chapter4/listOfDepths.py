@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../../DataStructures/')
-from graph import Node, Graph, initiateBinarySearchTree
+from graph import Node, Graph, initiateBinarySearchTreeGraph
 from linkedList import Node as LinkedListNode, printLinkedList
 
 
@@ -30,5 +30,5 @@ def listOfDepths(graph):
 
 if __name__ == '__main__':
 	graph = Graph()
-	initiateBinarySearchTree(graph, [1,3,4,6,9,12,15,19,22,25])
+	initiateBinarySearchTreeGraph(graph, [1,3,4,6,9,12,15,19,22,25])
 	listOfDepths(graph)
