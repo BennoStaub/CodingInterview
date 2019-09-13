@@ -61,9 +61,6 @@ def initiateGraph():
 def initiateBinarySearchTree(graph, values):
 	if values:
 		node = Node(values[len(values) // 2])
-		print('node ' + str(node.value))
-		print('left branch ' + str(values[:len(values) // 2]))
-		print('right branch ' + str(values[len(values) // 2 + 1:]))
 		graph.addNode(node)
 		if values[:len(values) // 2]:
 			node.children.append(initiateBinarySearchTree(graph, values[:len(values) // 2]))
