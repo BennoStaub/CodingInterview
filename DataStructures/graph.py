@@ -16,6 +16,49 @@ class Node():
 	def removeChild(self, node):
 		self.children.remove(node)
 
+class BinaryTreeNode():
+	def __init__(self, value, left=None, right=None):
+		self.value = value
+		self.visited = False
+		self.left = left
+		self.right = right
+
+	def addLeft(self, child):
+		self.left = child
+
+
+	def addRight(self, child):
+		self.right = child
+
+	def removeLeft(self):
+		self.left = None
+
+	def removeRight(self):
+		self.right = None
+
+
+def initiateBinaryTree():
+	# Initiate binary tree:
+	#			10
+	#		  /    \
+	#		 5		7
+	#	   /  \      \
+	#	  12  15	  9
+	#	 /  \		
+	#	4	 8
+	root = BinaryTreeNode(10)
+	root = root
+	root.left = BinaryTreeNode(5)
+	root.right = BinaryTreeNode(7)
+	root.left.left = BinaryTreeNode(12)
+	root.left.left.left = BinaryTreeNode(4)
+	root.left.left.right = BinaryTreeNode(8)
+	root.left.right = BinaryTreeNode(15)
+	root.right.right = BinaryTreeNode(9)
+	return root
+
+
+
 
 class Graph():
 
