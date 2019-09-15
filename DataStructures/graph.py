@@ -71,7 +71,7 @@ def printBinaryTree(tree):
 		level = children
 		children = []
 
-def initiateBinarySearchTree(values, parent=None):
+def initiateBinarySearchTree(values=[1,3,4,6,9,12,15,19,22,25], parent=None):
 	if values:
 		node = BinaryTreeNode(values[len(values) // 2], parent=parent)
 		if values[:len(values) // 2]:
